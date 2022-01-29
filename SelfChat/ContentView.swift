@@ -2,15 +2,16 @@
 //  ContentView.swift
 //  SelfChat
 //
-//  Created by MBA on 27.01.22.
+//  Created by Sunan Regi Maunakea on 27.01.22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            StartView()
+        }
     }
 }
 

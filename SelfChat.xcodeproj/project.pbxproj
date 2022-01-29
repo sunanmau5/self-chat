@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CE0034D27A5484D007C80F1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0034C27A5484D007C80F1 /* StartView.swift */; };
+		2CE0034F27A54857007C80F1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0034E27A54857007C80F1 /* ChatView.swift */; };
+		2CE0035127A54868007C80F1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0035027A54868007C80F1 /* InputView.swift */; };
 		2CEA9ED227A35B1500B80DA3 /* SelfChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA9ED127A35B1500B80DA3 /* SelfChatApp.swift */; };
 		2CEA9ED427A35B1500B80DA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA9ED327A35B1500B80DA3 /* ContentView.swift */; };
 		2CEA9ED627A35B1500B80DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEA9ED527A35B1500B80DA3 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CE0034C27A5484D007C80F1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		2CE0034E27A54857007C80F1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		2CE0035027A54868007C80F1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		2CEA9ECE27A35B1500B80DA3 /* SelfChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEA9ED127A35B1500B80DA3 /* SelfChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfChatApp.swift; sourceTree = "<group>"; };
 		2CEA9ED327A35B1500B80DA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CE0035227A54870007C80F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CE0034C27A5484D007C80F1 /* StartView.swift */,
+				2CE0034E27A54857007C80F1 /* ChatView.swift */,
+				2CE0035027A54868007C80F1 /* InputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2CEA9EC527A35B1500B80DA3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEA9ED127A35B1500B80DA3 /* SelfChatApp.swift */,
+				2CE0035227A54870007C80F1 /* Views */,
 				2CEA9ED327A35B1500B80DA3 /* ContentView.swift */,
 				2CEA9ED527A35B1500B80DA3 /* Assets.xcassets */,
 				2CEA9ED727A35B1500B80DA3 /* Preview Content */,
@@ -257,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE0034F27A54857007C80F1 /* ChatView.swift in Sources */,
+				2CE0034D27A5484D007C80F1 /* StartView.swift in Sources */,
+				2CE0035127A54868007C80F1 /* InputView.swift in Sources */,
 				2CEA9ED427A35B1500B80DA3 /* ContentView.swift in Sources */,
 				2CEA9ED227A35B1500B80DA3 /* SelfChatApp.swift in Sources */,
 			);
