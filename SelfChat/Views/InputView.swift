@@ -8,7 +8,27 @@
 import SwiftUI
 
 struct InputView: View {
+    @State private var message: String = ""
+    @Environment(\.presentationMode) private var presentationMode
+    
     var body: some View {
-        Text("This is the Input View")
+        HStack{
+            TextField("Message", text: $message)
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Image(systemName: "paperplane")
+                    .clipShape(Circle())
+            }
+        }
+        .padding()
+    }
+}
+
+struct InputView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            InputView()
+        }
     }
 }

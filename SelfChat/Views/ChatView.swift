@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ChatView: View {
-    var user: String
+    var user: User
     
     var body: some View {
         NavigationLink(destination: InputView()) {
-            Text("Write a message to \(user)")
+            Image(systemName: "plus.message")
         }
-        .navigationTitle(user)
+        .navigationTitle(user.name)
         
+    }
+}
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            ChatView(user: User(name: "Sunan Test", color: .red))
+        }
     }
 }
