@@ -7,16 +7,8 @@
 
 import SwiftUI
 
-struct StartView: View {    
-    private let chatPartners: [ChatPartner] = [
-        ChatPartner(name: "Michael Jordan"),
-        ChatPartner(name: "Sean King"),
-        ChatPartner(name: "Rich Brian"),
-        ChatPartner(name: "Bradley Cooper"),
-        ChatPartner(name: "Steve Jobs"),
-        ChatPartner(name: "John Cena"),
-    ]
-    
+struct StartView: View {
+    @ObservedObject var chatPartners = ChatPartnerController.shared
     private let twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
@@ -24,15 +16,18 @@ struct StartView: View {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(.gray)
                 .shadow(color: .gray, radius: 3, x: 2 , y: 4)
-            LazyVGrid(columns: twoColumnGrid, spacing: 40) {
-                ForEach(chatPartners, id: \.self) { chatPartner in
-                    NavigationLink(destination: ChatView(chatPartner: chatPartner)) {
-                        ChatPartnerView(chatPartner: chatPartner)
+            VStack {
+                LazyVGrid(columns: twoColumnGrid, spacing: 40) {
+                    ForEach(chatPartners.allChatPartners, id: \.self) { chatPartner in
+                        NavigationLink(destination: ChatView(chatPartner: chatPartner)) {
+                            ChatPartnerView(chatPartner: chatPartner)
+                        }
                     }
                 }
+                .frame(minWidth: 0, maxHeight: .infinity, alignment: .topLeading)
+                .offset(y: 20)
+                AddChatPartnerView()
             }
-            .frame(minWidth: 0, maxHeight: .infinity, alignment: .topLeading)
-            .offset(y: 20)
         }
         .navigationTitle("Messages")
         .padding()

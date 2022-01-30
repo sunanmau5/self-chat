@@ -16,19 +16,19 @@ struct ChatView: View {
         self.chatPartner = chatPartner
     }
     
-    func sendMessage(content: String, isSender: Bool) {
+    func addMessage(content: String, isSender: Bool) {
         messageController.create(message: Message(content: content, isSender: isSender))
     }
     
     var body: some View {
-        VStack {
-            ForEach(messageController.allMessages, id: \.self) { message in
+        VStack(spacing: 10) {
+            ForEach(messageController.allMessages.reversed(), id: \.self) { message in
                 MessageView(message: message)
             }
-            NavigationLink(destination: InputView { content, isSender in
-                sendMessage(content: content, isSender: isSender)
+            NavigationLink(destination: AddMessageView { content, isSender in
+                addMessage(content: content, isSender: isSender)
             }) {
-                Image(systemName: "plus.message")
+                IconView(iconName: "plus.message", size: 35)
             }
         }
         .navigationTitle(chatPartner.name)

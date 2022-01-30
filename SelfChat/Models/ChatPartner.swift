@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct ChatPartner: Codable, Hashable {
     let name: String

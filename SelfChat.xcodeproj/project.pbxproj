@@ -11,9 +11,11 @@
 		2C74096827A6FCA500593F92 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74096727A6FCA500593F92 /* MessageController.swift */; };
 		2C74096A27A6FD9900593F92 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74096927A6FD9900593F92 /* MessageView.swift */; };
 		2C74097427A714BB00593F92 /* ChatPartnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74097327A714BB00593F92 /* ChatPartnerController.swift */; };
+		2C74097E27A7338800593F92 /* AddChatPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74097D27A7338800593F92 /* AddChatPartnerView.swift */; };
+		2C74098227A737C400593F92 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74098127A737C400593F92 /* IconView.swift */; };
+		2C74098427A7390100593F92 /* AddMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74098327A7390100593F92 /* AddMessageView.swift */; };
 		2CE0034D27A5484D007C80F1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0034C27A5484D007C80F1 /* StartView.swift */; };
 		2CE0034F27A54857007C80F1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0034E27A54857007C80F1 /* ChatView.swift */; };
-		2CE0035127A54868007C80F1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0035027A54868007C80F1 /* InputView.swift */; };
 		2CE0035527A554BA007C80F1 /* ChatPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0035427A554BA007C80F1 /* ChatPartnerView.swift */; };
 		2CE0035C27A56006007C80F1 /* ChatPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0035B27A56006007C80F1 /* ChatPartner.swift */; };
 		2CEA9ED227A35B1500B80DA3 /* SelfChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA9ED127A35B1500B80DA3 /* SelfChatApp.swift */; };
@@ -47,9 +49,11 @@
 		2C74096727A6FCA500593F92 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		2C74096927A6FD9900593F92 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		2C74097327A714BB00593F92 /* ChatPartnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerController.swift; sourceTree = "<group>"; };
+		2C74097D27A7338800593F92 /* AddChatPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChatPartnerView.swift; sourceTree = "<group>"; };
+		2C74098127A737C400593F92 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		2C74098327A7390100593F92 /* AddMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageView.swift; sourceTree = "<group>"; };
 		2CE0034C27A5484D007C80F1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		2CE0034E27A54857007C80F1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		2CE0035027A54868007C80F1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		2CE0035427A554BA007C80F1 /* ChatPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerView.swift; sourceTree = "<group>"; };
 		2CE0035B27A56006007C80F1 /* ChatPartner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartner.swift; sourceTree = "<group>"; };
 		2CEA9ECE27A35B1500B80DA3 /* SelfChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +107,10 @@
 			children = (
 				2CE0034C27A5484D007C80F1 /* StartView.swift */,
 				2CE0034E27A54857007C80F1 /* ChatView.swift */,
-				2CE0035027A54868007C80F1 /* InputView.swift */,
 				2C74096927A6FD9900593F92 /* MessageView.swift */,
+				2C74097D27A7338800593F92 /* AddChatPartnerView.swift */,
+				2C74098127A737C400593F92 /* IconView.swift */,
+				2C74098327A7390100593F92 /* AddMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,14 +323,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE0034F27A54857007C80F1 /* ChatView.swift in Sources */,
+				2C74098227A737C400593F92 /* IconView.swift in Sources */,
 				2C74096827A6FCA500593F92 /* MessageController.swift in Sources */,
 				2CE0034D27A5484D007C80F1 /* StartView.swift in Sources */,
 				2C74097427A714BB00593F92 /* ChatPartnerController.swift in Sources */,
-				2CE0035127A54868007C80F1 /* InputView.swift in Sources */,
 				2CEA9ED427A35B1500B80DA3 /* ContentView.swift in Sources */,
 				2CEA9ED227A35B1500B80DA3 /* SelfChatApp.swift in Sources */,
 				2C74096427A6F9BE00593F92 /* Message.swift in Sources */,
+				2C74097E27A7338800593F92 /* AddChatPartnerView.swift in Sources */,
 				2CE0035527A554BA007C80F1 /* ChatPartnerView.swift in Sources */,
+				2C74098427A7390100593F92 /* AddMessageView.swift in Sources */,
 				2C74096A27A6FD9900593F92 /* MessageView.swift in Sources */,
 				2CE0035C27A56006007C80F1 /* ChatPartner.swift in Sources */,
 			);
