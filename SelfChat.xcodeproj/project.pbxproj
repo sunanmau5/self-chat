@@ -105,6 +105,7 @@
 		2CE0035227A54870007C80F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CE0035427A554BA007C80F1 /* ChatPartnerView.swift */,
 				2CE0034C27A5484D007C80F1 /* StartView.swift */,
 				2CE0034E27A54857007C80F1 /* ChatView.swift */,
 				2C74096927A6FD9900593F92 /* MessageView.swift */,
@@ -113,14 +114,6 @@
 				2C74098327A7390100593F92 /* AddMessageView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2CE0035327A5549B007C80F1 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				2CE0035427A554BA007C80F1 /* ChatPartnerView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		2CE0035A27A55FFB007C80F1 /* Models */ = {
@@ -157,7 +150,6 @@
 			children = (
 				2C74096627A6FC9600593F92 /* Controllers */,
 				2CE0035A27A55FFB007C80F1 /* Models */,
-				2CE0035327A5549B007C80F1 /* Components */,
 				2CEA9ED127A35B1500B80DA3 /* SelfChatApp.swift */,
 				2CE0035227A54870007C80F1 /* Views */,
 				2CEA9ED327A35B1500B80DA3 /* ContentView.swift */,
