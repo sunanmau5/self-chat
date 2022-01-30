@@ -7,42 +7,35 @@
 
 import SwiftUI
 
-struct StartView: View {
-    func getUserAcronym(name: String) -> String {
-        let formatter = PersonNameComponentsFormatter()
-        if let components = formatter.personNameComponents(from: name) {
-            formatter.style = .abbreviated
-            return formatter.string(from: components)
-        }
-        return ""
-    }
-    
-    private let users: [User] = [
-        User(name: "Michael Jordan", color: .blue),
-        User(name: "Sean King", color: .red),
-        User(name: "Rich Brian", color: .teal),
-        User(name: "Bradley Cooper", color: .green),
-        User(name: "Steve Jobs", color: .orange),
-        User(name: "John Cena", color: .gray),
+struct StartView: View {    
+    private let chatPartners: [ChatPartner] = [
+        ChatPartner(name: "Michael Jordan"),
+        ChatPartner(name: "Sean King"),
+        ChatPartner(name: "Rich Brian"),
+        ChatPartner(name: "Bradley Cooper"),
+        ChatPartner(name: "Steve Jobs"),
+        ChatPartner(name: "John Cena"),
     ]
     
-    private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
+    private let twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .padding()
-                .foregroundColor(.brown)
+                .foregroundColor(.gray)
                 .shadow(color: .gray, radius: 3, x: 2 , y: 4)
             LazyVGrid(columns: twoColumnGrid, spacing: 40) {
-                ForEach(users, id: \.self) { user in
-                    NavigationLink(destination: ChatView(user: user)) {
-                        UserPreview(acronym: getUserAcronym(name: user.name), color: user.color)
+                ForEach(chatPartners, id: \.self) { chatPartner in
+                    NavigationLink(destination: ChatView(chatPartner: chatPartner)) {
+                        ChatPartnerView(chatPartner: chatPartner)
                     }
                 }
             }
-            .navigationTitle("Messages")
+            .frame(minWidth: 0, maxHeight: .infinity, alignment: .topLeading)
+            .offset(y: 20)
         }
+        .navigationTitle("Messages")
+        .padding()
     }
 }
 

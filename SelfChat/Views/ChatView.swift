@@ -8,21 +8,38 @@
 import SwiftUI
 
 struct ChatView: View {
-    var user: User
+    var chatPartner: ChatPartner
+    @ObservedObject var messageController: MessageController
+    
+    init(chatPartner: ChatPartner) {
+        messageController = MessageController(chatPartner: chatPartner)
+        self.chatPartner = chatPartner
+    }
+    
+    func sendMessage(content: String, isSender: Bool) {
+        messageController.create(message: Message(content: content, isSender: isSender))
+    }
     
     var body: some View {
-        NavigationLink(destination: InputView()) {
-            Image(systemName: "plus.message")
+        VStack {
+            ForEach(messageController.allMessages, id: \.self) { message in
+                MessageView(message: message)
+            }
+            NavigationLink(destination: InputView { content, isSender in
+                sendMessage(content: content, isSender: isSender)
+            }) {
+                Image(systemName: "plus.message")
+            }
         }
-        .navigationTitle(user.name)
-        
+        .navigationTitle(chatPartner.name)
+        .padding()
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ChatView(user: User(name: "Sunan Test", color: .red))
+            ChatView(chatPartner: ChatPartner(name: "Sunan Test"))
         }
     }
 }
