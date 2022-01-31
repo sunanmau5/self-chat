@@ -16,15 +16,15 @@ class MessageController: ObservableObject {
     init(chatPartner: ChatPartner) {
         currentChatPartner = chatPartner.name
         let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let messagesPath = documentsPath.appendingPathComponent(currentChatPartner).appendingPathComponent("json")
+        let messagesPath = documentsPath.appendingPathComponent(currentChatPartner).appendingPathExtension("json")
         dataSourceURL = messagesPath
         
         _allMessages = Published(wrappedValue: getAllMessages())
     }
     
     private func getAllMessages() -> [Message] {
+        let decoder = JSONDecoder()
         do {
-            let decoder = JSONDecoder()
             let data = try Data(contentsOf: dataSourceURL)
             let decodedMessages = try! decoder.decode([Message].self, from: data)
             return decodedMessages
@@ -34,8 +34,8 @@ class MessageController: ObservableObject {
     }
     
     private func saveMessages() {
+        let encoder = JSONEncoder()
         do {
-            let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(allMessages)
             try data.write(to: dataSourceURL)

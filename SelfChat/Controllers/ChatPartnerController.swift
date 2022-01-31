@@ -15,7 +15,8 @@ class ChatPartnerController: ObservableObject {
     
     init() {
         let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let chatPartnerPath = documentsPath.appendingPathComponent("chat-partner").appendingPathComponent("json")
+        let chatPartnerPath = documentsPath.appendingPathComponent("chat-partner").appendingPathExtension("json")
+        print("Chat Partner Path: \(chatPartnerPath)")
         dataSourceURL = chatPartnerPath
         
         _allChatPartners = Published(wrappedValue: getAllChatPartners())
